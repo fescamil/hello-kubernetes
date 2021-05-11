@@ -5,10 +5,11 @@ metadata:
   namespace: kube-system
 spec:
   rules:
-  - host: localhost
+  - host: hello.info
     http:
       paths: 
       - path: /
+        pathType: Prefix
       backend:
         serviceName: traefik-web-ui
         servicePort: admin
